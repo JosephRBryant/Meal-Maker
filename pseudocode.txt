@@ -1,0 +1,27 @@
+Wants:   Add your dishes
+         Record previous meals to calendar
+         Randomizer has param such as:
+             Options below
+         Save lists to DOM or whatever
+         Shake phone or tap dice to get random meal
+         If you don't like meal, shake/tap again
+         If you do like it click save
+         Option to apply saved meal to calendar
+         
+Options: Same cuisines two days in a row?
+         Same general dish two nights in a row?
+         Allow desserts?
+
+
+
+
+Input -     Arrays of cuisines and dishes
+    Form for adding dishes to array and dropdown for choosing cuisine type
+    
+
+
+
+
+
+
+Output -    Creates temporary objects of random meals that can be assigned to a day of the week

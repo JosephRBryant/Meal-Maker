@@ -1,3 +1,39 @@
+Input -     Arrays of cuisines and dishes
+
+    Form for adding dishes to array and dropdown for choosing cuisine type
+    Use arrays to store dishes, so Italian array with subarrays entree, side, dessert
+
+
+         
+    
+    
+
+
+
+
+
+
+Output -    Creates temporary objects of random meals that can be assigned to a day of the week
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Wants:   Add your dishes
          Record previous meals to calendar
          Randomizer has param such as:
@@ -15,13 +51,37 @@ Options: Same cuisines two days in a row?
 
 
 
-Input -     Arrays of cuisines and dishes
-    Form for adding dishes to array and dropdown for choosing cuisine type
-    
 
 
 
 
 
 
-Output -    Creates temporary objects of random meals that can be assigned to a day of the week
+
+
+
+
+
+
+
+
+
+
+
+
+
+    Italian             American                Mexican             Chinese
+        Entree              Entree                  Entree              Entree
+         Spaghetti           Hamburgers              Chimichangas        Fried Rice
+         Linguini            Porkchops               Nachos              Chow Mexican
+         Alfredo             Pizza                   Tacos               Sesame Chicken
+        
+        Sides              Sides                  Sides              Sides
+         Starch             Starch                 Starch             Starch
+          Garlic Bread       French Fries           Mexican Rice       Egg Rolls
+          Breadsticks        Baked Potato           Beans              Fried Rice
+          Cheesebread        Mashed Potato          Guac               Fried Dumplings
+         
+         Veg                Veg                    Veg                Veg
+          Salad              Salad                  Salad              Edamame
+        etc...

@@ -1,7 +1,58 @@
+Naming
+    AddCuisine
+    AddDish
+    CuisinArr
+    DishArr
+    EntreeArr
+    SideArr
+    DessertArr
+    getRandomMeal
+    randomAllowed
+
+
+    1. Record dishes
+
+            A. Cuisine Array
+    2. Make Random Meal
+    3. Save Meal to calendar
+
+
+
 Input -     Arrays of cuisines and dishes
 
-    Form for adding dishes to array and dropdown for choosing cuisine type
-    Use arrays to store dishes, so Italian array with subarrays entree, side, dessert
+    Add Dishes
+        Form for adding dishes to array and dropdown for choosing cuisine type
+        Use arrays to store dishes, example: Italian array with subarrays entree, sideVeg, sideStarch, dessert
+            Italian.Entree.Spaghetti, italian.side.ceasarSalad, italian.dessert.tiramisu
+            Universal Sides/Dishes
+
+    Randomize Meal parameters
+        Checkboxes for one/two/three sides, dessert, appetizer
+
+    Randomize meal
+        Dice button or shake phone to generate random meal.
+            Use vibration and noise in phone to imitate dice
+        Event starts getRandomMeal function
+            getRandomMeal
+                first gets a random number and pulls that array item from allowed Cuisine array
+                second repeats the random number for sub-array entree from cuisine array
+                third same but for side-veg sub-array, side-starch, dessert
+
+                return mealObj
+
+        populate innerHTML with randomized meal; Tonight you'll have italian, spaghetti with a ceasar salad and tiramisu for dessert.
+
+    Save/Reroll mealObj
+
+        Save to dayObj
+            Example, monObj:
+                                    Cuisine:italian
+                                    Entree:Spaghetti
+                                    Side:ceasar Salad
+                                    dessert:tiramisu
+
+        
+
 
 
          

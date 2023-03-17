@@ -13,8 +13,21 @@ Naming
     1. Record dishes
 
             A. Cuisine Array
+            B.      Entree subarray
+            C.      Sides subarray
+            D.      Dessert subarray
+
     2. Make Random Meal
+
+            A. Generate num to pick cuisine in array
+            B. Gen num to pick cuisine entree, sides, dessert.
+            C. Update DOM to reflect Meal
+
     3. Save Meal to calendar
+
+            A. Calendar li with mon-fri
+            B. Array of days filled with empty objects
+            C. Save button on days to apply Random Meal obj to day obj
 
 
 

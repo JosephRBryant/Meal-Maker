@@ -83,8 +83,12 @@ body {
 }
 
 .dice-roll {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     background-color: white;
-    max-width: 20vw;
+    width: 30vw;
     height: 30vh;
     padding: 3rem;
     border-radius: 1rem;
@@ -94,10 +98,32 @@ body {
     width: 100px;
     cursor: pointer;
     transition: .2s;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .dice-roll img:active {
     transform: rotate(360deg) translateY(1rem);
     width: 90px;
     margin-bottom: .6rem;
+    -webkit-tap-highlight-color: transparent;
+}
+
+@media only screen and (max-width: 768px) {
+
+    body {
+        /* padding: 5rem; */
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    header {
+        /* margin-bottom: 4rem; */
+    }
+
+    .dice-roll {
+        width: 70%;
+        height: 60%;
+    }
 }

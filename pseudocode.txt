@@ -1,11 +1,11 @@
 Naming
     AddCuisine
     AddDish
-    CuisinArr
-    DishArr
-    EntreeArr
-    SideArr
-    DessertArr
+    dishes obj
+        cuisine
+        entree
+        side
+        dessert
     getRandomMeal
     randomAllowed
 
@@ -149,3 +149,21 @@ Options: Same cuisines two days in a row?
          Veg                Veg                    Veg                Veg
           Salad              Salad                  Salad              Edamame
         etc...
+
+
+
+
+
+
+
+
+
+
+        HTML elements - POC
+
+        Header - Meal Maker
+        subheader h2 - Click dice to create a meal!
+
+        container
+            dice image (shifts down on click)
+            h3 -  For dinner tonight...

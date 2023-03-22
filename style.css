@@ -85,6 +85,7 @@ body {
 .dice-roll {
     background-color: white;
     max-width: 20vw;
+    height: 30vh;
     padding: 3rem;
     border-radius: 1rem;
 }
@@ -92,8 +93,11 @@ body {
 .dice-roll img {
     width: 100px;
     cursor: pointer;
+    transition: .2s;
 }
 
 .dice-roll img:active {
-    transform: translateY(.2rem);
+    transform: rotate(360deg) translateY(1rem);
+    width: 90px;
+    margin-bottom: .6rem;
 }

@@ -19,33 +19,35 @@
     </header>
     <div class="form-container">
         <h3>Add your cuisines and dishes</h3>
-        <form id="cuisine-form">
+        <form class="cuisine-form">
             <input type="text" name="cuisine-input" class="cuisine-input" placeholder="Add Cuisine">
             <button class="cuisine-button" type="submit">
               <i class="fas fa-plus-square"></i>
             </button>
           </form>
-          <form id="dish-form">      
-            <select name="cuisine-select" class="cuisine-select">
-              <option>Select Cuisine</option>
-              <!-- <option value="0">Italian</option>
-              <option value="1">American</option>
-              <option value="2">Mexican</option> -->
-            </select>
-            <select name="dish-select" class="dish-select">
-              <option>Select Dish</option>
-              <option value="entree">Entree</option>
-              <option value="side">Side</option>
-              <option value="dessert">Dessert</option>
-            </select>
-            <input type="text" name="dish-input" class="dish-input" placeholder="Add Dish">
-            <button class="dish-button" type="submit">
-              <i class="fas fa-plus-square"></i>
-            </button>
+          <form id="dish-form">
+            <div class="select-form">
+              <select name="cuisine-select" class="cuisine-select">
+                <option>Select Cuisine</option>
+              </select>
+              <select name="dish-select" class="dish-select">
+                <option>Select Dish</option>
+                <option value="entree">Entree</option>
+                <option value="side">Side</option>
+                <option value="dessert">Dessert</option>
+              </select>
+            </div>
+            <div class="add-dish">
+              <input type="text" name="dish-input" class="dish-input" placeholder="Add Dish">
+              <button class="dish-button" type="submit">
+                <i class="fas fa-plus-square"></i>
+              </button>
+            </div>
           </form>
     </div>
     <div class="dice-roll">
-        <img src="images/dice.png" alt="dice button" onclick="getRandomMeal()">
+        <!-- <img src="images/dice.png" alt="dice button" onclick="getRandomMeal()"> -->
+        <img class="dice" src="images/Dice_simple_flat.svg" alt="dice button" onclick="getRandomMeal()">
         <h3 id="my-meal">Roll the Dice<br>Make a Meal</h3>
     </div>
     <script src="app.js"></script>

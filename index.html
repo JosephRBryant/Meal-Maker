@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Lilita+One&family=Roboto:ital,wght@0,100;0,400;0,500;0,900;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -18,37 +19,58 @@
         <h2>Roll the dice to create a meal!</h2>
     </header>
     <div class="form-container">
-        <h3>Add your cuisines and dishes</h3>
-        <form class="cuisine-form">
-            <input type="text" name="cuisine-input" class="cuisine-input" placeholder="Add Cuisine">
-            <button class="cuisine-button" type="submit">
-              <i class="fas fa-plus-square"></i>
-            </button>
-          </form>
-          <form id="dish-form">
-            <div class="select-form">
-              <select name="cuisine-select" class="cuisine-select">
-                <option>Select Cuisine</option>
-              </select>
-              <select name="dish-select" class="dish-select">
-                <option>Select Dish</option>
-                <option value="entree">Entree</option>
-                <option value="side">Side</option>
-                <option value="dessert">Dessert</option>
-              </select>
-            </div>
-            <div class="add-dish">
-              <input type="text" name="dish-input" class="dish-input" placeholder="Add Dish">
-              <button class="dish-button" type="submit">
-                <i class="fas fa-plus-square"></i>
-              </button>
-            </div>
-          </form>
+      <h3>Add your cuisines and dishes</h3>
+      <form class="cuisine-form">
+        <input type="text" name="cuisine-input" class="cuisine-input" placeholder="Add Cuisine">
+        <button class="cuisine-button" type="submit">
+          <i class="fas fa-plus-square"></i>
+        </button>
+      </form>
+      <form id="dish-form">
+        <div class="select-form">
+          <select name="cuisine-select" class="cuisine-select">
+            <option>Select Cuisine</option>
+          </select>
+          <select name="dish-select" class="dish-select">
+            <option>Select Dish</option>
+            <option value="entree">Entree</option>
+            <option value="side">Side</option>
+            <option value="dessert">Dessert</option>
+          </select>
+        </div>
+        <div class="add-dish">
+          <input type="text" name="dish-input" class="dish-input" placeholder="Add Dish">
+          <button class="dish-button" type="submit">
+            <i class="fas fa-plus-square"></i>
+          </button>
+        </div>
+      </form>
     </div>
-    <div class="dice-roll">
+    <div class="generator">
+      <form action="" class="generator-options">
+        <select name="num-sides" id="num-sides">
+          <option value="">Number of Sides</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+        <div class="dessert-toggle-button-cover">
+          <div class="button-cover">
+            <div class="button r" id="dessert-btn">
+              <input type="checkbox" class="checkbox" />
+              <div class="knobs">
+                <span></span>
+              </div>
+              <div class="layer"></div>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="dice-roll">
         <!-- <img src="images/dice.png" alt="dice button" onclick="getRandomMeal()"> -->
         <img class="dice" src="images/Dice_simple_flat.svg" alt="dice button" onclick="getRandomMeal()">
         <h3 id="my-meal">Roll the Dice<br>Make a Meal</h3>
+    </div>
     </div>
     <script src="app.js"></script>
 </body>

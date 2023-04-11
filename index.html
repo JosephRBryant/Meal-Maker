@@ -3,20 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Meal Maker</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mallanna&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Lilita+One&family=Roboto:ital,wght@0,100;0,400;0,500;0,900;1,300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
-        <h1>Meal Maker</h1>
-        <h2>Roll the dice to create a meal!</h2>
+        <img src="images/logo.svg" alt="" class="logo">
+        <div class="header-text">
+          <h1>Meal Maker</h1>
+          <h2>meal planning made simple</h2>
+        </div>
     </header>
     <div class="form-container">
       <h3>Add your cuisines and dishes</h3>
@@ -48,13 +52,25 @@
     </div>
     <div class="generator">
       <form action="" class="generator-options">
-        <select name="num-sides" id="num-sides">
-          <option value="">Number of Sides</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select>
+        <div class="num-sides">
+          <label for="num-sides-sel">Sides</label>
+          <div class="sides-dropdown">
+            <button id="decrement"> - </button>
+            <input type="number" min="0" max="4" step="1" id="my-input" value="1" readonly>
+            <button id="increment"> + </button>
+            <!-- <select name="num-sides-sel" id="num-sides-sel">
+              <option value="">Number of Sides</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <div class="select-arrow">
+              <i class="fa-solid fa-caret-down" style="color: #ffeedc;"></i>
+            </div> -->
+          </div>
+        </div>
         <div class="dessert-toggle-button-cover">
+          <label for="">Dessert</label>
           <div class="button-cover">
             <div class="button r" id="dessert-btn">
               <input type="checkbox" class="checkbox" />
@@ -69,7 +85,7 @@
       <div class="dice-roll">
         <!-- <img src="images/dice.png" alt="dice button" onclick="getRandomMeal()"> -->
         <img class="dice" src="images/Dice_simple_flat.svg" alt="dice button" onclick="getRandomMeal()">
-        <h3 id="my-meal">Roll the Dice<br>Make a Meal</h3>
+        <h3 id="my-meal">Roll the Dice - Make a Meal</h3>
     </div>
     </div>
     <script src="app.js"></script>

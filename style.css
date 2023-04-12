@@ -66,12 +66,25 @@ table {
 
 
 /*          Start Custom CSS v2          */
-            /* Typography */
 
+            /* HTML/BODY */
 
 html {
     height: 100%;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    height: 100vh;
+    background-color: #F9D162;
+}
+
+            /* Typography */
 
 h1 {
     font-family: 'Mallanna', sans-serif;
@@ -83,7 +96,7 @@ h2 {
     font-family: 'Merriweather', serif;
     font-size: .77rem;
     font-weight: 300;
-    color: #0A5688;
+    color: #F3954F;
 }
 
 h3 {
@@ -91,13 +104,18 @@ h3 {
     font-size: 1.2rem;
 }
 
+            /* Header */
+
+
 header {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 6.5rem;
-    border-bottom: 2px solid #F3954F;
+    background-color: white;
+    /* border-bottom: 2px solid #F3954F; */
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
 }
 
 header img {
@@ -114,24 +132,37 @@ header img {
     margin-left: .2rem;
 }
 
-body {
+.popout-container {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    box-sizing: border-box;
-    height: 100vh;
-    /* max-height:100%;     */
 }
+
+.popout {
+    display: flex;
+}
+
+.popout i {
+    font-size: 2rem;
+}
+
+.popout h2 {
+    color: white;
+    font-family: roboto, sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-left: 1rem;
+}
+
+            /* Dishes Form */
 
 .form-container {
     display: none;
 }
 
+            /* Generator Options */
+
 label {
     font-family: roboto, sans-serif;
-    color: #0A5688;
+    color: #ffffff;
 }
 
 .generator {
@@ -143,8 +174,13 @@ label {
 .generator-options {
     display: flex;
     justify-content: space-around;
-    margin: 5rem 0;
+    padding: 2rem 0;
+    background-color: #6BC6A5;
+    box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.2);
+
 }
+
+            /* Number of Sides Picker */
 
 .num-sides {
     display: flex;
@@ -186,6 +222,10 @@ input::-webkit-inner-spin-button {
     cursor: pointer;
 }
 
+.sides-dropdown button:active {
+    background-color: #e6bc47;
+}
+
 #decrement,
 #increment {
     height: 1.75rem;
@@ -194,9 +234,7 @@ input::-webkit-inner-spin-button {
     border-radius: 2px;
 }
 
-.sides-dropdown button:active {
-    background-color: #e6bc47;
-}
+            /* Dessert Toggle */
 
 .dessert-toggle-button-cover {
     display: flex;
@@ -315,17 +353,18 @@ input::-webkit-inner-spin-button {
     background-color: #bcd5e5;
 }
 
+            /* Generator */
+
 .dice-roll {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 40vh;
+    height: 55vh;
     width: 100vw;
     padding: 3rem;
     background-color: #fbfbfb;
-    border-radius: 1rem 1rem 0 0;
-    box-shadow: 0px -1px 10px rgba(78, 78, 78, .2);
+    box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.2);
 }
 
 .dice {

@@ -56,16 +56,40 @@ table {
 /* Style guide */
 
 /*
-    #0A5688
-    #FFFFFF
-    #F9D162
-    #F3954F
-    #6BC6A5
+    #24223B;
+    #272078;
+    #FB6B1C;
+    #F2F2F1;
+    #F8F8F8;
+    #ACB2B5;
+    background: rgb(39,32,120);
+background: linear-gradient(135deg, rgba(39,32,120,1) 0%, rgba(36,34,59,1) 100%);
 */
 
 
 
 /*          Start Custom CSS v2          */
+
+            /* Root Properties */
+:root {
+    --primary-color: #24223B;
+    --secondary-color: #FB6B1C;
+    --secondary-light-color: #FAEEE8;
+    --secondary-dark-color: #88431D;
+    --light-color: #F2F2F1;
+    --medium-color: #F8F8F8;
+    --dark-color: #ACB2B5;
+
+    --primary-font: 'Roboto', sans-serif;
+    --secondary-font: 'Montserrat Alternates', sans-serif;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
 
             /* HTML/BODY */
 
@@ -76,32 +100,31 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     text-align: center;
     box-sizing: border-box;
-    height: 100vh;
-    background-color: #F9D162;
+    width: 100%;
+    height: 100%;
+    background-color: var(--light-color);
 }
 
             /* Typography */
 
 h1 {
-    font-family: 'Mallanna', sans-serif;
-    font-size: 3rem;
+    font-family: var(--secondary-font);
+    font-size: 1.5rem;
+    font-weight: 300;
     color: #0A5688;
 }
 
 h2 {
-    font-family: 'Merriweather', serif;
-    font-size: .77rem;
-    font-weight: 300;
-    color: #F3954F;
+    font-family: 'roboto', sans-serif;
+    font-size: 1.125rem;
 }
 
 h3 {
-    font-family: 'Abel', sans-serif;
-    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
 }
 
             /* Header */
@@ -109,75 +132,225 @@ h3 {
 
 header {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
-    height: 6.5rem;
+    height: 3.25rem;
     background-color: white;
-    /* border-bottom: 2px solid #F3954F; */
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
 }
 
 header img {
-    width: 4.2rem;
+    width: 2rem;
     margin-right: .3rem;
+    margin: 0 .3rem .3rem 1rem;
 }
 
 .header-text {
     text-align: start;
-    margin-bottom: .2rem;
 }
 
 .header-text h2 {
     margin-left: .2rem;
 }
 
-.popout-container {
+            /* Cuisine Form */
+
+.cuisine-container {
     display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 79px;
+    width: 100%;
+    background: var(--primary-color);
+    background-color: #fff;
+    border-radius: 0 0 1rem 1rem;
+    z-index: 3;
 }
 
-.popout {
+.cuisine-form {
     display: flex;
+    align-items: center;
+    width: 100%;
+    margin: .75rem 1.25rem;
 }
 
-.popout i {
-    font-size: 2rem;
+.cuisine-input {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.25rem;
+    height: 45px;
+    width: 100%;
+    border: none;
+    color: var(--secondary-dark-color);
+    background-color: var(--secondary-light-color);
+    border-radius: 0 25px 25px 0;
 }
 
-.popout h2 {
-    color: white;
-    font-family: roboto, sans-serif;
-    font-size: 2rem;
-    font-weight: 500;
-    margin-left: 1rem;
+.cuisine-button {
+    height: 45px;
+    width: 45px;
+    border: none;
+    border-radius: 25px 0 0 25px;
+    background-color: var(--secondary-light-color);
+}
+
+.cuisine-button i {
+    font-size: 1.25rem;
+    color: var(--secondary-dark-color);
 }
 
             /* Dishes Form */
 
-.form-container {
-    display: none;
+.dish-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -15px;
+    width: 100%;
+    padding-top: 15px;
+    border-radius: 0 0 1rem 1rem;
+    background: rgb(39,32,120);
+    background: linear-gradient(135deg, rgba(39,32,120,1) 0%, rgba(36,34,59,1) 100%);
+    z-index: 2;
 }
 
-            /* Generator Options */
+.dish-form {
+    width: 100%;
+    margin: .75rem 1.25rem;
+}
+
+.select-form {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.dish-select, .cuisine-select {
+    width: 47%;
+    height: 28px;
+    border: none;
+    border-radius: 14px;
+    padding: 0 13px;
+    color: var(--secondary-dark-color);
+    background-color: var(--secondary-light-color);
+
+}
+
+.add-dish {
+    display: flex;
+    margin-top: .75rem;
+}
+
+.dish-input {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.25rem;
+    height: 45px;
+    width: 100%;
+    border: none;
+    color: var(--secondary-dark-color);
+    background-color: var(--secondary-light-color);
+    border-radius: 0 25px 25px 0;
+}
+
+.dish-button {
+    height: 45px;
+    width: 45px;
+    border: none;
+    border-radius: 25px 0 0 25px;
+    background-color: var(--secondary-light-color);
+}
+
+.dish-button i {
+    font-size: 1.25rem;
+    color: var(--secondary-dark-color);
+}
+
+            /* Generator */
 
 label {
     font-family: roboto, sans-serif;
     color: #ffffff;
 }
 
-.generator {
+.dice-roll {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: -30px;
+    z-index: 1;
+    height: 489px;
+    width: 100%;
+    background: url(images/mariana-medvedeva-usfIE5Yc7PY-unsplash.jpg);
+    background-size: cover;
+    background-color: #fbfbfb;
+    box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.2);
 }
+
+.dice {
+    width: 6rem;
+    height: auto;
+    margin: 2rem;
+}
+
+.dice-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+}
+
+.dice-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 66px;
+    margin: 0.75rem;
+    padding: 0 6px 0 50px;
+    border-radius: 33rem;
+    color: #fff;
+    background: rgb(39,32,120);
+    background: linear-gradient(135deg, rgba(39,32,120,1) 0%, rgba(36,34,59,1) 100%);
+}
+
+.dice-button img {
+    width: 54px;
+
+}
+
+.meal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.25rem;
+    top: 45px;
+    width: 100%;
+    height: 165px;
+    color: var(--primary-color);
+    background-color: #fff;
+    border-radius: 1rem 1rem 0 0;
+}
+
+            /* Generator Options */
 
 .generator-options {
     display: flex;
     justify-content: space-around;
-    padding: 2rem 0;
-    background-color: #6BC6A5;
+    align-items: center;
+    width: 100%;
+    height: 108px;
+    border-radius: 1rem 1rem 0 0;
+    background: rgb(39,32,120);
+    background: linear-gradient(135deg, rgba(39,32,120,1) 0%, rgba(36,34,59,1) 100%);
     box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.2);
-
+    z-index: 2;
 }
 
             /* Number of Sides Picker */
@@ -190,11 +363,14 @@ label {
 
 .sides-dropdown {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     align-content: center;
+    width: 126px;
     height: 36px;
-    margin: 1rem 0;
-    background-color: white;
+    margin: 0.625rem 0;
+    border-radius: 18px;
+    background-color: var(--secondary-light-color);
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -204,8 +380,8 @@ input[type="number"] {
     font-size: .9rem;
     font-family: roboto;
     border: none;
-    background-color: white;
-    color: #0A5688;
+    background-color: var(--secondary-light-color);
+    color: var(--secondary-dark-color);
 }
 
 input::-webkit-outer-spin-button,
@@ -216,14 +392,14 @@ input::-webkit-inner-spin-button {
 
 .sides-dropdown button {
     color: #ffffff;
-    background-color: #F9D162;
+    background-color: var(--secondary-color);
     border: none;
     font-size: 1.2rem;
     cursor: pointer;
 }
 
 .sides-dropdown button:active {
-    background-color: #e6bc47;
+    background-color: var(--secondary-dark-color);
 }
 
 #decrement,
@@ -231,7 +407,7 @@ input::-webkit-inner-spin-button {
     height: 1.75rem;
     width: 2rem;
     margin: 0 .25rem;
-    border-radius: 2px;
+    border-radius: 14px;
 }
 
             /* Dessert Toggle */
@@ -245,7 +421,7 @@ input::-webkit-inner-spin-button {
 }
 
 .button-cover {
-    margin: 1rem 0;
+    margin: 0.625rem 0;
 }
 
 .knobs,
@@ -285,7 +461,8 @@ input::-webkit-inner-spin-button {
 
 .layer {
     width: 100%;
-    background-color: white;
+    border-radius: 6px;
+    background-color: var(--secondary-light-color);
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     transition: 0.3s ease all;
     z-index: 1;
@@ -324,6 +501,7 @@ input::-webkit-inner-spin-button {
     left: 4px;
     font-family: roboto;
     font-weight: 400;
+    color: var(--secondary-dark-color);
 }
 
 #dessert-btn .knobs:after {
@@ -331,13 +509,14 @@ input::-webkit-inner-spin-button {
     right: 4px;
     font-family: roboto;
     font-weight: 400;
+    color: var(--primary-color);
 }
 
 #dessert-btn .knobs span {
     right: 4px;
     width: 33px;
     height: 28px;
-    background-color: #F9D162;
+    background-color: var(--secondary-color);
     transform: rotateY(0);
     transform-origin: 0% 50%;
     transition: 0.6s ease all;
@@ -346,29 +525,26 @@ input::-webkit-inner-spin-button {
 
 #dessert-btn .checkbox:checked + .knobs span {
     transform: rotateY(-180deg);
-    background-color: #0A5688;
+    background-color: var(--primary-color);
 }
 
 #dessert-btn .checkbox:checked ~ .layer {
-    background-color: #bcd5e5;
+    background-color: var(--medium-color);
 }
 
-            /* Generator */
+            /* Cuisine Option */
 
-.dice-roll {
+.cuisine-option {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 55vh;
-    width: 100vw;
-    padding: 3rem;
-    background-color: #fbfbfb;
-    box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.2);
 }
 
-.dice {
-    width: 6rem;
-    height: auto;
-    margin: 2rem;
+.cuisine-option-select {
+    margin: 0.625rem 0;
+    width: 125px;
+    height: 36px;
+    border-radius: 18px;
+    padding: 0 13px;
+    color: var(--secondary-dark-color);
+    background-color: var(--secondary-light-color);
 }

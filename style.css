@@ -71,7 +71,7 @@ background: linear-gradient(135deg, rgba(39,32,120,1) 0%, rgba(36,34,59,1) 100%)
 /*          Start Custom CSS v2          */
 
             /* Root Properties */
-:root {
+/* :root {
     --primary-color: #24223B;
     --secondary-color: #FB6B1C;
     --secondary-light-color: #FAEEE8;
@@ -79,6 +79,20 @@ background: linear-gradient(135deg, rgba(39,32,120,1) 0%, rgba(36,34,59,1) 100%)
     --light-color: #F2F2F1;
     --medium-color: #F8F8F8;
     --dark-color: #ACB2B5;
+
+    --primary-font: 'Roboto', sans-serif;
+    --secondary-font: 'Montserrat Alternates', sans-serif;
+} */
+
+:root {
+    --primary-color: #60BA62;
+    --primary-light-color: #7DC67F;
+    --secondary-color: #FF9800;
+    --secondary-light-color: #FFCB7F;
+    --secondary-dark-color: #88431D;
+    --light-color: #FFFFFE;
+    --medium-color: #F9F9F9;
+    --dark-color: #EBEBEA;
 
     --primary-font: 'Roboto', sans-serif;
     --secondary-font: 'Montserrat Alternates', sans-serif;
@@ -136,7 +150,7 @@ header {
     align-items: center;
     width: 100%;
     height: 3.25rem;
-    background-color: white;
+    background-color: var(--medium-color);
 }
 
 header img {
@@ -162,7 +176,7 @@ header img {
     height: 79px;
     width: 100%;
     background: var(--primary-color);
-    background-color: #fff;
+    background-color: var(--medium-color);
     border-radius: 0 0 1rem 1rem;
     z-index: 3;
 }
@@ -182,8 +196,8 @@ header img {
     height: 45px;
     width: 100%;
     border: none;
-    color: var(--secondary-dark-color);
-    background-color: var(--secondary-light-color);
+    color: var(--dark-color);
+    background-color: var(--light-color);
     border-radius: 0 25px 25px 0;
 }
 
@@ -192,7 +206,7 @@ header img {
     width: 45px;
     border: none;
     border-radius: 25px 0 0 25px;
-    background-color: var(--secondary-light-color);
+    background-color: var(--light-color);
 }
 
 .cuisine-button i {
@@ -210,8 +224,7 @@ header img {
     width: 100%;
     padding-top: 15px;
     border-radius: 0 0 1rem 1rem;
-    background: rgb(39,32,120);
-    background: linear-gradient(135deg, rgba(39,32,120,1) 0%, rgba(36,34,59,1) 100%);
+    background-color: var(--primary-color);
     z-index: 2;
 }
 
@@ -233,7 +246,7 @@ header img {
     border-radius: 14px;
     padding: 0 13px;
     color: var(--secondary-dark-color);
-    background-color: var(--secondary-light-color);
+    background-color: var(--light-color);
 
 }
 
@@ -251,7 +264,7 @@ header img {
     width: 100%;
     border: none;
     color: var(--secondary-dark-color);
-    background-color: var(--secondary-light-color);
+    background-color: var(--light-color);
     border-radius: 0 25px 25px 0;
 }
 
@@ -260,7 +273,7 @@ header img {
     width: 45px;
     border: none;
     border-radius: 25px 0 0 25px;
-    background-color: var(--secondary-light-color);
+    background-color: var(--light-color);
 }
 
 .dish-button i {
@@ -314,8 +327,7 @@ label {
     padding: 0 6px 0 50px;
     border-radius: 33rem;
     color: #fff;
-    background: rgb(39,32,120);
-    background: linear-gradient(135deg, rgba(39,32,120,1) 0%, rgba(36,34,59,1) 100%);
+    background-color: var(--primary-color);
 }
 
 .dice-button img {
@@ -327,12 +339,15 @@ label {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: start;
     position: relative;
     font-family: "Roboto", sans-serif;
     font-size: 1.25rem;
+    line-height: 1.6rem;
     top: 45px;
     width: 100%;
     height: 165px;
+    padding: 0 1rem;
     color: var(--primary-color);
     background-color: #fff;
     border-radius: 1rem 1rem 0 0;
@@ -344,11 +359,10 @@ label {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
+    width: 90%;
     height: 108px;
     border-radius: 1rem 1rem 0 0;
-    background: rgb(39,32,120);
-    background: linear-gradient(135deg, rgba(39,32,120,1) 0%, rgba(36,34,59,1) 100%);
+    background-color: var(--primary-color);
     box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.2);
     z-index: 2;
 }
@@ -370,7 +384,7 @@ label {
     height: 36px;
     margin: 0.625rem 0;
     border-radius: 18px;
-    background-color: var(--secondary-light-color);
+    background-color: var(--light-color);
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -380,7 +394,7 @@ input[type="number"] {
     font-size: .9rem;
     font-family: roboto;
     border: none;
-    background-color: var(--secondary-light-color);
+    background-color: var(--light-color);
     color: var(--secondary-dark-color);
 }
 
@@ -462,7 +476,7 @@ input::-webkit-inner-spin-button {
 .layer {
     width: 100%;
     border-radius: 6px;
-    background-color: var(--secondary-light-color);
+    background-color: var(--light-color);
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     transition: 0.3s ease all;
     z-index: 1;
@@ -543,8 +557,9 @@ input::-webkit-inner-spin-button {
     margin: 0.625rem 0;
     width: 125px;
     height: 36px;
+    border: none;
     border-radius: 18px;
     padding: 0 13px;
     color: var(--secondary-dark-color);
-    background-color: var(--secondary-light-color);
+    background-color: var(--light-color);
 }

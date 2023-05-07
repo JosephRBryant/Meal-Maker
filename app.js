@@ -82,13 +82,14 @@ function pushDish(event) {
 
 
 const getRandomMeal = () => {
-    const myMeal = document.getElementById('my-meal');
+    // const myMeal = document.getElementById('my-meal');
+    const myMeal = document.querySelector('.meal-container');
 
     const randomCuisine = dishes[Math.floor(Math.random() * dishes.length)];
     const randomEntree = randomCuisine.entree[Math.floor(Math.random() * randomCuisine.entree.length)];
     const randomSide = randomCuisine.side[Math.floor(Math.random() * randomCuisine.side.length)];
     const randomDessert = randomCuisine.dessert[Math.floor(Math.random() * randomCuisine.dessert.length)];    
-    console.log(`For dinner tonight we will have ${randomEntree.toLowerCase()} with a side of ${randomSide.toLowerCase()} and ${randomDessert.toLowerCase()} for dessert. Bon Apetite!`)
-    myMeal.innerHTML = `For dinner tonight we will have <span>${randomEntree.toLowerCase()}</span> with a side of <span>${randomSide.toLowerCase()}</span> and <span>${randomDessert.toLowerCase()}</span> for dessert.`
+    // console.log(`For dinner tonight we will have ${randomEntree.toLowerCase()} with a side of ${randomSide.toLowerCase()} and ${randomDessert.toLowerCase()} for dessert. Bon Apetite!`)
+    myMeal.innerHTML = `For dinner tonight we will have ${randomEntree.toLowerCase()} with a side of ${randomSide.toLowerCase()} and ${randomDessert.toLowerCase()} for dessert.`;
 };
 

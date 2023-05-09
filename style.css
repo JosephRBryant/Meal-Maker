@@ -93,6 +93,8 @@ background: linear-gradient(135deg, rgba(39,32,120,1) 0%, rgba(36,34,59,1) 100%)
     --light-color: #FFFFFE;
     --medium-color: #F9F9F9;
     --dark-color: #EBEBEA;
+    --extra-dark-color: #4E594E;
+
 
     --primary-font: 'Roboto', sans-serif;
     --secondary-font: 'Montserrat Alternates', sans-serif;
@@ -114,7 +116,7 @@ html {
 body {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 4fr 2fr;
+    grid-template-rows: 1fr 1fr 6fr 2fr;
     row-gap: 1rem;
     height: 100dvh;
     padding: 1rem;
@@ -133,7 +135,7 @@ h1 {
     font-family: var(--secondary-font);
     font-size: 1.5rem;
     font-weight: 300;
-    color: #0A5688;
+    color: #4E594E;
 }
 
 h2 {
@@ -143,7 +145,7 @@ h2 {
 
 h3 {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
             /* Header */
@@ -297,24 +299,79 @@ header img {
 
             /* Page Toggle */
 
-.page-toggle {
+.slider-container {
+    width: 100%;
+    height: auto;
     display: flex;
-    align-items: end;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
 }
-
-.meal-toggle {
-    background-color: var(--primary-color);
-    width: 50%;
-    height: 3rem;
-    border-radius: 1.5rem;
-}
-
-.dish-toggle {
+    
+.tabs {
+    display: flex;
+    position: relative;
     background-color: #fff;
+    width: 100%;
+    border-radius: 50px;
+    box-shadow: 0px 3px 10px -4px rgba(0, 0, 0, 0.16);
+}
+
+.tabs *{
+    z-index: 2;
+}
+
+input[type=radio]{
+    display: none;
+}
+
+.tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
     width: 50%;
-    height: 3rem;
-    border-radius: 1.5rem;
+    color: var(--extra-dark-color);
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: colorTab 0.15s ease-in;
+}
+
+input[type=radio]:checked + label {
+    color: #111;
+}
+
+.tab-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.15s ease-in;
+}
+
+input[type=radio]:checked + label > .tab-label {
+    color: #f0f0f0;
+}
+
+.glider {
+    position: absolute;
+    display: flex;
+    height: 48px;
+    width: 50%;
+    background-color: #60BA62;
+    z-index: 1;
+    border-radius: 50px;
+    transition: 0.25s ease-out;
+}
+
+input[id=radio-1]:checked ~ .glider {
+    transform: translateX(0);
+}
+
+input[id=radio-2]:checked ~ .glider {
+    transform: translateX(100%);
 }
 
             /* Generator */
@@ -324,69 +381,86 @@ label {
     color: #ffffff;
 }
 
-.dice-roll {
-    display: flex;
+.generator {
+    display: grid;
+    grid-template-rows: 3fr 1fr;
     flex-direction: column;
-    justify-content: space-between;
+    justify-items: center;
     align-items: center;
     width: 100%;
-    background-color: #fbfbfb;
-    box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.2);
-}
-
-.dice-button-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 350px;
-}
-
-.dice-button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 60%;
-    height: 63px;
-    margin: 0.75rem;
-    padding: 0 6px 0 50px;
-    border-radius: 33rem;
-    color: #fff;
-    background-color: var(--secondary-color);
-}
-
-.dice-button img {
-    width: 54px;
-
+    padding: 2.25rem;
+    border-radius: 2rem;
+    background-color: #fff;
+    box-shadow: 0px 3px 10px -4px rgba(0, 0, 0, 0.16);
 }
 
 .meal-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: start;
-    position: relative;
-    font-family: "Roboto", sans-serif;
-    font-size: 1.25rem;
-    line-height: 1.6rem;
-    top: 45px;
+    text-align: center;
     width: 100%;
-    height: 165px;
-    padding: 0 1rem;
+    height: 100%;
     color: var(--primary-color);
-    background-color: #fff;
-    border-radius: 1rem 1rem 0 0;
 }
+
+.meal-container h3 {
+    font-family: var(--secondary-font);
+    font-size: 1.125rem;
+}
+
+.generator-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    height: 4rem;
+    border-radius: 33rem;
+    color: #fff;
+    background-color: var(--secondary-color);
+}
+
 
             /* Generator Options */
 
 .generator-options {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    border-radius: 1rem 1rem 0 0;
+    padding: 1rem;
+    border-radius: 2rem;
     background-color: var(--primary-color);
     box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.2);
     z-index: 2;
+}
+
+.options-icon {
+    display: flex;
+}
+
+.cuisine-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+}
+
+.cuisine-option-select {
+    margin: 0.625rem 0;
+    width: 100%;
+    height: 2.25rem;
+    border: none;
+    border-radius: 18px;
+    padding: 0 13px;
+    color: var(--secondary-dark-color);
+    background-color: var(--light-color);
+}
+
+.sides-dessert {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
 }
 
             /* Number of Sides Picker */
@@ -568,20 +642,3 @@ input::-webkit-inner-spin-button {
     background-color: var(--medium-color);
 }
 
-            /* Cuisine Option */
-
-.cuisine-option {
-    display: flex;
-    flex-direction: column;
-}
-
-.cuisine-option-select {
-    margin: 0.625rem 0;
-    width: 125px;
-    height: 36px;
-    border: none;
-    border-radius: 18px;
-    padding: 0 13px;
-    color: var(--secondary-dark-color);
-    background-color: var(--light-color);
-}

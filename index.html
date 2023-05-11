@@ -27,41 +27,43 @@
     </header>
     <div class="slider-container">
       <div class="tabs">
-        <input type="radio" name="tabs" id="radio-1" checked>
+        <input type="radio" name="tabs" id="radio-1" onclick="makeMealSwap()" checked>
         <label for="radio-1" class="tab"><span class="tab-label">Make a meal</span></label>
-        <input type="radio" name="tabs" id="radio-2" checked>
+        <input type="radio" name="tabs" id="radio-2" onclick="addDishSwap()">
         <label for="radio-2" class="tab"><span class="tab-label">Add a dish</span></label>
         <span class="glider"></span>
       </div>
     </div>
-    <div class="cuisine-container">
-      <form class="cuisine-form">
-        <button class="cuisine-button" type="submit">
-          <i class="fa-sharp fa-regular fa-plus"></i>
-        </button>
-        <input type="text" name="cuisine-input" class="cuisine-input" placeholder="add cuisine">
-      </form>
-    </div>
-    <div class="dish-container">
-      <form class="dish-form">
-        <div class="select-form">
-          <select name="dish-select" class="dish-select">
-            <option>Select Dish</option>
-            <option value="entree">Entree</option>
-            <option value="side">Side</option>
-            <option value="dessert">Dessert</option>
-          </select>
-          <select name="cuisine-select" class="cuisine-select">
-            <option>Select Cuisine</option>
-          </select>
-        </div>
-        <div class="add-dish">
-          <button class="dish-button" type="submit">
+    <div class="add-page">
+      <div class="cuisine-container">
+        <form class="cuisine-form">
+          <button class="cuisine-button" type="submit">
             <i class="fa-sharp fa-regular fa-plus"></i>
           </button>
-          <input type="text" name="dish-input" class="dish-input" placeholder="add dish">
-        </div>
-      </form>
+          <input type="text" name="cuisine-input" class="cuisine-input" placeholder="add cuisine">
+        </form>
+      </div>
+      <div class="dish-container">
+        <form class="dish-form">
+          <div class="select-form">
+            <select name="dish-select" class="dish-select">
+              <option>Select Dish</option>
+              <option value="entree">Entree</option>
+              <option value="side">Side</option>
+              <option value="dessert">Dessert</option>
+            </select>
+            <select name="cuisine-select" class="cuisine-select">
+              <option>Select Cuisine</option>
+            </select>
+          </div>
+          <div class="add-dish">
+            <button class="dish-button" type="submit">
+              <i class="fa-sharp fa-regular fa-plus"></i>
+            </button>
+            <input type="text" name="dish-input" class="dish-input" placeholder="add dish">
+          </div>
+        </form>
+      </div>
     </div>
     <div class="generator">
       <!-- <img src="images/dice.png" alt="dice button" onclick="getRandomMeal()"> -->

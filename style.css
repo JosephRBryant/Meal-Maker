@@ -71,18 +71,6 @@ background: linear-gradient(135deg, rgba(39,32,120,1) 0%, rgba(36,34,59,1) 100%)
 /*          Start Custom CSS v2          */
 
             /* Root Properties */
-/* :root {
-    --primary-color: #24223B;
-    --secondary-color: #FB6B1C;
-    --secondary-light-color: #FAEEE8;
-    --secondary-dark-color: #88431D;
-    --light-color: #F2F2F1;
-    --medium-color: #F8F8F8;
-    --dark-color: #ACB2B5;
-
-    --primary-font: 'Roboto', sans-serif;
-    --secondary-font: 'Montserrat Alternates', sans-serif;
-} */
 
 :root {
     --primary-color: #60BA62;
@@ -170,32 +158,42 @@ header img {
 .header-text h2 {
     margin-left: .2rem;
 }
+            /* Add Form Container */
+
+.add-page {
+    display: none;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    padding: 2.25rem;
+    border-radius: 2rem;
+    background-color: #fff;
+    box-shadow: 0px 3px 10px -4px rgba(0, 0, 0, 0.16);
+}
 
             /* Cuisine Form */
 
 .cuisine-container {
-    display: none;
-    /* display: flex;
+    display: flex;
     justify-content: center;
     align-items: flex-end;
     width: 100%;
     background: var(--primary-color);
     background-color: var(--medium-color);
     border-radius: 0 0 1rem 1rem;
-    z-index: 3; */
+    z-index: 3;
 }
 
 .cuisine-form {
-    display: none;
-    /* display: flex;
+    display: flex;
     align-items: center;
     width: 100%;
-    margin: .75rem 1.25rem; */
+    margin: .75rem 1.25rem;
 }
 
 .cuisine-input {
-    display: none;
-    /* display: flex;
+    display: flex;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 1.25rem;
@@ -204,29 +202,26 @@ header img {
     border: none;
     color: var(--dark-color);
     background-color: var(--light-color);
-    border-radius: 0 25px 25px 0; */
+    border-radius: 0 25px 25px 0;
 }
 
 .cuisine-button {
-    display: none;
-    /* height: 45px;
+    height: 45px;
     width: 45px;
     border: none;
     border-radius: 25px 0 0 25px;
-    background-color: var(--light-color); */
+    background-color: var(--light-color);
 }
 
 .cuisine-button i {
-    display: none;
-    /* font-size: 1.25rem;
-    color: var(--secondary-dark-color); */
+    font-size: 1.25rem;
+    color: var(--secondary-dark-color);
 }
 
             /* Dishes Form */
 
 .dish-container {
-    display: none;
-    /* display: flex;
+    display: flex;
     justify-content: center;
     position: relative;
     top: -15px;
@@ -234,43 +229,38 @@ header img {
     padding-top: 15px;
     border-radius: 0 0 1rem 1rem;
     background-color: var(--primary-color);
-    z-index: 2; */
+    z-index: 2;
 }
 
 .dish-form {
-    display: none;
-    /* width: 100%;
-    margin: .75rem 1.25rem; */
+    width: 100%;
+    margin: .75rem 1.25rem;
 }
 
 .select-form {
-    display: none;
-    /* display: flex;
+    display: flex;
     justify-content: space-between;
-    width: 100%; */
+    width: 100%;
 }
 
 .dish-select, .cuisine-select {
-    display: none;
-    /* width: 47%;
+    width: 47%;
     height: 28px;
     border: none;
     border-radius: 14px;
     padding: 0 13px;
     color: var(--secondary-dark-color);
-    background-color: var(--light-color); */
+    background-color: var(--light-color);
 
 }
 
 .add-dish {
-    display: none;
-    /* display: flex;
-    margin-top: .75rem; */
+    display: flex;
+    margin-top: .75rem;
 }
 
 .dish-input {
-    display: none;
-    /* display: flex;
+    display: flex;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 1.25rem;
@@ -279,22 +269,20 @@ header img {
     border: none;
     color: var(--secondary-dark-color);
     background-color: var(--light-color);
-    border-radius: 0 25px 25px 0; */
+    border-radius: 0 25px 25px 0;
 }
 
 .dish-button {
-    display: none;
-    /* height: 45px;
+    height: 45px;
     width: 45px;
     border: none;
     border-radius: 25px 0 0 25px;
-    background-color: var(--light-color); */
+    background-color: var(--light-color);
 }
 
 .dish-button i {
-    display: none;
-    /* font-size: 1.25rem;
-    color: var(--secondary-dark-color); */
+    font-size: 1.25rem;
+    color: var(--secondary-dark-color);
 }
 
             /* Page Toggle */
@@ -417,6 +405,7 @@ label {
     height: 4rem;
     border-radius: 33rem;
     color: #fff;
+    cursor: pointer;
     background-color: var(--secondary-color);
 }
 

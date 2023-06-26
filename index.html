@@ -25,79 +25,60 @@
           <h1>mealmaker</h1>
         </div>
     </header>
-    <div class="cuisine-container">
-      <form class="cuisine-form">
-        <button class="cuisine-button" type="submit">
-          <i class="fa-sharp fa-regular fa-plus"></i>
-        </button>
-        <input type="text" name="cuisine-input" class="cuisine-input" placeholder="add cuisine">
-      </form>
+    <div class="slider-container">
+      <div class="tabs">
+        <input type="radio" name="tabs" id="radio-1" onclick="makeMealSwap()" checked>
+        <label for="radio-1" class="tab"><span class="tab-label">Make a meal</span></label>
+        <input type="radio" name="tabs" id="radio-2" onclick="addDishSwap()">
+        <label for="radio-2" class="tab"><span class="tab-label">Add a dish</span></label>
+        <span class="glider"></span>
+      </div>
     </div>
-    <div class="dish-container">
-      <form class="dish-form">
-        <div class="select-form">
-          <select name="dish-select" class="dish-select">
-            <option>Select Dish</option>
-            <option value="entree">Entree</option>
-            <option value="side">Side</option>
-            <option value="dessert">Dessert</option>
-          </select>
-          <select name="cuisine-select" class="cuisine-select">
-            <option>Select Cuisine</option>
-          </select>
-        </div>
-        <div class="add-dish">
-          <button class="dish-button" type="submit">
+    <div class="add-page">
+      <div class="cuisine-container">
+        <form class="cuisine-form">
+          <button class="cuisine-button" type="submit">
             <i class="fa-sharp fa-regular fa-plus"></i>
           </button>
-          <input type="text" name="dish-input" class="dish-input" placeholder="add dish">
-        </div>
-      </form>
-    </div>
-    <div class="dice-roll">
-      <!-- <img src="images/dice.png" alt="dice button" onclick="getRandomMeal()"> -->
-      <img class="dice" src="images/Dice.svg" alt="dice button" onclick="getRandomMeal()">
-      <div class="dice-button-container">
-        <div class="dice-button">
-          <h2>Roll the Dice - Make a Meal</h2>
-          <img src="images/dice-btn.svg" alt="">
-        </div>
+          <input type="text" name="cuisine-input" class="cuisine-input" placeholder="add cuisine">
+        </form>
       </div>
+      <div class="dish-container">
+        <form class="dish-form">
+          <div class="select-form">
+            <select name="dish-select" class="dish-select">
+              <option>Select Dish</option>
+              <option value="entree">Entree</option>
+              <option value="side">Side</option>
+              <option value="dessert">Dessert</option>
+            </select>
+            <select name="cuisine-select" class="cuisine-select">
+              <option>Select Cuisine</option>
+            </select>
+          </div>
+          <div class="add-dish">
+            <button class="dish-button" type="submit">
+              <i class="fa-sharp fa-regular fa-plus"></i>
+            </button>
+            <input type="text" name="dish-input" class="dish-input" placeholder="add dish">
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="generator">
+      <!-- <img src="images/dice.png" alt="dice button" onclick="getRandomMeal()"> -->
+      <!-- <img class="dice" src="images/Dice.svg" alt="dice button" onclick="getRandomMeal()"> -->
       <div class="meal-container">
-        <h3 id="my-meal">Let's see what we're having!
-        </h3>
+        <h3 id="my-meal">Click below to create a random meal.</h3>
+      </div>
+      <div class="generator-button" alt="gen button" onclick="getRandomMeal()">
+        <h2>GENERATE MEAL</h2>
       </div>
     </div>
     <form action="" class="generator-options">
-      <div class="num-sides">
-        <label for="num-sides-sel">Sides</label>
-        <div class="sides-dropdown">
-          <button id="decrement"> - </button>
-          <input type="number" min="0" max="4" step="1" id="my-input" value="1" readonly>
-          <button id="increment"> + </button>
-          <!-- <select name="num-sides-sel" id="num-sides-sel">
-            <option value="">Number of Sides</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-          </select>
-          <div class="select-arrow">
-            <i class="fa-solid fa-caret-down" style="color: #ffeedc;"></i>
-          </div> -->
-        </div>
-      </div>
-      <div class="dessert-toggle-button-cover">
-        <label for="">Dessert</label>
-        <div class="button-cover">
-          <div class="button r" id="dessert-btn">
-            <input type="checkbox" class="checkbox" />
-            <div class="knobs">
-              <span></span>
-            </div>
-            <div class="layer"></div>
-          </div>
-        </div>
-      </div>
+      <!-- <div class="options-icon">
+        <i class="fa-solid fa-gear" style="color: #ffffff;"></i>
+      </div> -->
       <div class="cuisine-option">
         <label for="cuisine-option-select">Cuisine</label>
         <select name="cuisine-option-select" class="cuisine-option-select">
@@ -106,6 +87,38 @@
           <option value="side">Side</option>
           <option value="dessert">Dessert</option>
         </select>
+      </div>
+      <div class="sides-dessert">
+        <div class="num-sides">
+          <label for="num-sides-sel">Sides</label>
+          <div class="sides-dropdown">
+            <button id="decrement"> - </button>
+            <input type="number" min="0" max="4" step="1" id="my-input" value="1" readonly>
+            <button id="increment"> + </button>
+            <!-- <select name="num-sides-sel" id="num-sides-sel">
+              <option value="">Number of Sides</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <div class="select-arrow">
+              <i class="fa-solid fa-caret-down" style="color: #ffeedc;"></i>
+            </div> -->
+          </div>
+        </div>
+        <div class="dessert-toggle-button-cover">
+          <label for="">Dessert</label>
+          <div class="button-cover">
+            <div class="button r" id="dessert-btn">
+              <input type="checkbox" class="checkbox" />
+              <div class="knobs">
+                <span></span>
+              </div>
+              <div class="layer"></div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </form>
     <script src="app.js"></script>

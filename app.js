@@ -24,7 +24,13 @@ const cuisineButton = document.querySelector('.cuisine-button');
 const cuisineSelect = document.querySelector('.cuisine-select');
 const dishSelect = document.querySelector('.dish-select');
 const dishInput = document.querySelector('.dish-input');
-const dishButton = document.querySelector('.dish-button')
+const dishButton = document.querySelector('.dish-button');
+const cuisineModal = document.querySelector('.cuisine-container');
+const dishModal = document.querySelector('.dish-container');
+const makeMealButton = document.getElementById('radio-1');
+const addDishButton = document.getElementById('radio-2');
+const addDishPage = document.querySelector('.add-page');
+const makeMealPage = document.querySelector('.generator');   
 
 /*              Event Listeners                */
 
@@ -33,6 +39,21 @@ cuisineButton.addEventListener('click', pushCuisine);
 dishButton.addEventListener('click', pushDish);
 
 /*              Functions                */
+
+// Slider Tabs
+
+const addDishSwap = () => {
+    addDishPage.style.display = 'flex';
+    makeMealPage.style.display = 'none';
+}
+
+const makeMealSwap = () => {
+    makeMealPage.style.display = 'grid';
+    addDishPage.style.display = 'none';
+}
+
+makeMealButton.addEventListener('click', makeMealSwap);
+addDishButton.addEventListener('click', addDishSwap);
 
 // Add Cuisine Type
 function pushCuisine(event) {
@@ -82,13 +103,14 @@ function pushDish(event) {
 
 
 const getRandomMeal = () => {
-    const myMeal = document.getElementById('my-meal');
+    // const myMeal = document.getElementById('my-meal');
+    const myMeal = document.querySelector('.meal-container');
 
     const randomCuisine = dishes[Math.floor(Math.random() * dishes.length)];
     const randomEntree = randomCuisine.entree[Math.floor(Math.random() * randomCuisine.entree.length)];
     const randomSide = randomCuisine.side[Math.floor(Math.random() * randomCuisine.side.length)];
     const randomDessert = randomCuisine.dessert[Math.floor(Math.random() * randomCuisine.dessert.length)];    
-    console.log(`For dinner tonight we will have ${randomEntree.toLowerCase()} with a side of ${randomSide.toLowerCase()} and ${randomDessert.toLowerCase()} for dessert. Bon Apetite!`)
-    myMeal.innerHTML = `For dinner tonight we will have <span>${randomEntree.toLowerCase()}</span> with a side of <span>${randomSide.toLowerCase()}</span> and <span>${randomDessert.toLowerCase()}</span> for dessert.`
+    // console.log(`For dinner tonight we will have ${randomEntree.toLowerCase()} with a side of ${randomSide.toLowerCase()} and ${randomDessert.toLowerCase()} for dessert. Bon Apetite!`)
+    myMeal.innerHTML = `For dinner tonight we will have ${randomEntree.toLowerCase()} with a side of ${randomSide.toLowerCase()} and ${randomDessert.toLowerCase()} for dessert.`;
 };
 

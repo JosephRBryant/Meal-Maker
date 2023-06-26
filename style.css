@@ -215,7 +215,7 @@ header img {
 
 .cuisine-button i {
     font-size: 1.25rem;
-    color: var(--secondary-dark-color);
+    color: var(--secondary-color);
 }
 
             /* Dishes Form */
@@ -282,7 +282,7 @@ header img {
 
 .dish-button i {
     font-size: 1.25rem;
-    color: var(--secondary-dark-color);
+    color: var(--secondary-color);
 }
 
             /* Page Toggle */

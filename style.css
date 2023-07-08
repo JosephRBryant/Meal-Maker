@@ -191,7 +191,7 @@ html {
 body {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 7rem 3rem 6fr 2fr;
+    grid-template-rows: 5rem 3rem 6fr 2fr;
     height: 100dvh;
     padding: 0 1rem 1rem 1rem;
     /* flex-direction: column;
@@ -229,7 +229,7 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: start;
-    margin-top: 3rem;
+    margin-top: 1.5rem;
 }
 
 header img {

@@ -48,14 +48,14 @@ const addDishSwap = () => {
     addDishPage.style.display = 'flex';
     genOptions.style.display = 'none';
     makeMealPage.style.display = 'none';
-    body.style.gridTemplateRows = '7rem 3rem 6fr';
+    body.style.gridTemplateRows = '5rem 3rem 6fr';
 }
 
 const makeMealSwap = () => {
     makeMealPage.style.display = 'grid';
     genOptions.style.display = 'flex';
     addDishPage.style.display = 'none';
-    body.style.gridTemplateRows = '7rem 3rem 6fr 2fr';
+    body.style.gridTemplateRows = '5rem 3rem 6fr 2fr';
 }
 
 makeMealButton.addEventListener('click', makeMealSwap);

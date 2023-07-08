@@ -265,9 +265,10 @@ header img {
     align-items: flex-end;
     width: 100%;
     height: 50%;
+    margin-bottom: -2rem;
     background: var(--primary-color);
     background-color: var(--light-color);
-    border-radius: 1rem;
+    border-radius: 2rem;
     z-index: 3;
 }
 
@@ -306,15 +307,23 @@ header img {
 
 /* Dishes Form */
 
+.green-block {
+    width: 100%;
+    height: 2rem;
+    padding: 0 1rem;
+    /* position: absolute;
+    bottom: 50%; */
+    background-color: var(--primary-color);
+}
+
 .dish-container {
     display: flex;
     justify-content: center;
     position: relative;
-    top: -15px;
     width: 100%;
     height: 50%;
     padding-top: 15px;
-    border-radius: 0 0 1rem 1rem;
+    border-radius: 0 0 2rem 2rem;
     background-color: var(--primary-color);
     z-index: 2;
 }
@@ -472,13 +481,16 @@ label {
 }
 
 .meal-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
     text-align: center;
+    font-family: var(--secondary-font);
     width: 100%;
-    height: 100%;
     color: var(--primary-color);
+}
+
+.meal-container span {
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 .meal-container h3 {

@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -7,49 +7,136 @@
     box-sizing: border-box;
 }
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
     -webkit-tap-highlight-color: transparent;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+    list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 
@@ -70,7 +157,7 @@ background: linear-gradient(135deg, rgba(39,32,120,1) 0%, rgba(36,34,59,1) 100%)
 
 /*          Start Custom CSS v2          */
 
-            /* Root Properties */
+/* Root Properties */
 
 :root {
     --primary-color: #60BA62;
@@ -95,7 +182,7 @@ button:focus {
     outline: none;
 }
 
-            /* HTML/BODY */
+/* HTML/BODY */
 
 html {
     height: 100%;
@@ -104,10 +191,9 @@ html {
 body {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 6fr 2fr;
-    row-gap: 1rem;
+    grid-template-rows: 9rem 3rem 6fr 2fr;
     height: 100dvh;
-    padding: 1rem;
+    padding: 0 1rem 1rem 1rem;
     /* flex-direction: column;
     align-items: center;
     text-align: center;
@@ -117,7 +203,7 @@ body {
     background-color: var(--medium-color);
 }
 
-            /* Typography */
+/* Typography */
 
 h1 {
     font-family: var(--secondary-font);
@@ -136,13 +222,14 @@ h3 {
     font-size: 1rem;
 }
 
-            /* Header */
+/* Header */
 
 
 header {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: start;
+    margin-top: 3rem;
 }
 
 header img {
@@ -158,7 +245,8 @@ header img {
 .header-text h2 {
     margin-left: .2rem;
 }
-            /* Add Form Container */
+
+/* Add Form Container */
 
 .add-page {
     display: none;
@@ -166,22 +254,20 @@ header img {
     justify-items: center;
     align-items: center;
     width: 100%;
-    padding: 2.25rem;
-    border-radius: 2rem;
-    background-color: #fff;
-    box-shadow: 0px 3px 10px -4px rgba(0, 0, 0, 0.16);
+    margin: 1.125rem 0 0 0;
 }
 
-            /* Cuisine Form */
+/* Cuisine Form */
 
 .cuisine-container {
     display: flex;
     justify-content: center;
     align-items: flex-end;
     width: 100%;
+    height: 50%;
     background: var(--primary-color);
-    background-color: var(--medium-color);
-    border-radius: 0 0 1rem 1rem;
+    background-color: var(--light-color);
+    border-radius: 1rem;
     z-index: 3;
 }
 
@@ -189,7 +275,7 @@ header img {
     display: flex;
     align-items: center;
     width: 100%;
-    margin: .75rem 1.25rem;
+    margin: 1.75rem 1.25rem;
 }
 
 .cuisine-input {
@@ -201,7 +287,7 @@ header img {
     width: 100%;
     border: none;
     color: var(--dark-color);
-    background-color: var(--light-color);
+    background-color: var(--medium-color);
     border-radius: 0 25px 25px 0;
 }
 
@@ -210,7 +296,7 @@ header img {
     width: 45px;
     border: none;
     border-radius: 25px 0 0 25px;
-    background-color: var(--light-color);
+    background-color: var(--medium-color);
 }
 
 .cuisine-button i {
@@ -218,7 +304,7 @@ header img {
     color: var(--secondary-color);
 }
 
-            /* Dishes Form */
+/* Dishes Form */
 
 .dish-container {
     display: flex;
@@ -226,6 +312,7 @@ header img {
     position: relative;
     top: -15px;
     width: 100%;
+    height: 50%;
     padding-top: 15px;
     border-radius: 0 0 1rem 1rem;
     background-color: var(--primary-color);
@@ -243,7 +330,8 @@ header img {
     width: 100%;
 }
 
-.dish-select, .cuisine-select {
+.dish-select,
+.cuisine-select {
     width: 47%;
     height: 28px;
     border: none;
@@ -285,7 +373,7 @@ header img {
     color: var(--secondary-color);
 }
 
-            /* Page Toggle */
+/* Page Toggle */
 
 .slider-container {
     width: 100%;
@@ -295,7 +383,7 @@ header img {
     justify-content: center;
     font-family: sans-serif;
 }
-    
+
 .tabs {
     display: flex;
     position: relative;
@@ -305,11 +393,11 @@ header img {
     box-shadow: 0px 3px 10px -4px rgba(0, 0, 0, 0.16);
 }
 
-.tabs *{
+.tabs * {
     z-index: 2;
 }
 
-input[type=radio]{
+input[type=radio] {
     display: none;
 }
 
@@ -327,7 +415,7 @@ input[type=radio]{
     transition: colorTab 0.15s ease-in;
 }
 
-input[type=radio]:checked + label {
+input[type=radio]:checked+label {
     color: #111;
 }
 
@@ -339,7 +427,7 @@ input[type=radio]:checked + label {
     transition: 0.15s ease-in;
 }
 
-input[type=radio]:checked + label > .tab-label {
+input[type=radio]:checked+label>.tab-label {
     color: #f0f0f0;
 }
 
@@ -354,15 +442,15 @@ input[type=radio]:checked + label > .tab-label {
     transition: 0.25s ease-out;
 }
 
-input[id=radio-1]:checked ~ .glider {
+input[id=radio-1]:checked~.glider {
     transform: translateX(0);
 }
 
-input[id=radio-2]:checked ~ .glider {
+input[id=radio-2]:checked~.glider {
     transform: translateX(100%);
 }
 
-            /* Generator */
+/* Generator */
 
 label {
     font-family: roboto, sans-serif;
@@ -376,6 +464,7 @@ label {
     justify-items: center;
     align-items: center;
     width: 100%;
+    margin: 1.125rem 0;
     padding: 2.25rem;
     border-radius: 2rem;
     background-color: #fff;
@@ -410,7 +499,7 @@ label {
 }
 
 
-            /* Generator Options */
+/* Generator Options */
 
 .generator-options {
     display: flex;
@@ -452,7 +541,7 @@ label {
     width: 70%;
 }
 
-            /* Number of Sides Picker */
+/* Number of Sides Picker */
 
 .num-sides {
     display: flex;
@@ -509,7 +598,7 @@ input::-webkit-inner-spin-button {
     border-radius: 14px;
 }
 
-            /* Dessert Toggle */
+/* Dessert Toggle */
 
 .dessert-toggle-button-cover {
     display: flex;
@@ -622,12 +711,11 @@ input::-webkit-inner-spin-button {
     z-index: 1;
 }
 
-#dessert-btn .checkbox:checked + .knobs span {
+#dessert-btn .checkbox:checked+.knobs span {
     transform: rotateY(-180deg);
     background-color: var(--primary-color);
 }
 
-#dessert-btn .checkbox:checked ~ .layer {
+#dessert-btn .checkbox:checked~.layer {
     background-color: var(--medium-color);
 }
-

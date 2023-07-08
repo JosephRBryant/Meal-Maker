@@ -3,17 +3,17 @@ let dishes = [];
 // Function to Get Dish Array from Local Storage
 function getLocalStorage() {
     // If No Dishes Array Create Array, Otherwise Parse Dishes Arr from Local Storage
-    if(localStorage.getItem('dishes') === null) {
+    if (localStorage.getItem('dishes') === null) {
         dishes = [];
-        } else {
-            dishes = JSON.parse(localStorage.getItem('dishes'));
+    } else {
+        dishes = JSON.parse(localStorage.getItem('dishes'));
     }
     // For Each Stored Cuisine Repopulate Options Drop Down
     for (let i = 0; i < dishes.length; i++) {
         // Capitalize Cuisine for Option HTML
-        const capitalizedCuisine = dishes[i].cuisine.charAt(0).toUpperCase() + dishes[i].cuisine.slice (1);
+        const capitalizedCuisine = dishes[i].cuisine.charAt(0).toUpperCase() + dishes[i].cuisine.slice(1);
         // Add New Cuisine Option
-        cuisineSelect.options.add( new Option(capitalizedCuisine, dishes.length - 1));
+        cuisineSelect.options.add(new Option(capitalizedCuisine, dishes.length - 1));
     }
 };
 
@@ -30,7 +30,9 @@ const dishModal = document.querySelector('.dish-container');
 const makeMealButton = document.getElementById('radio-1');
 const addDishButton = document.getElementById('radio-2');
 const addDishPage = document.querySelector('.add-page');
-const makeMealPage = document.querySelector('.generator');   
+const makeMealPage = document.querySelector('.generator');
+const genOptions = document.querySelector('.generator-options');
+const body = document.querySelector('body');
 
 /*              Event Listeners                */
 
@@ -44,12 +46,16 @@ dishButton.addEventListener('click', pushDish);
 
 const addDishSwap = () => {
     addDishPage.style.display = 'flex';
+    genOptions.style.display = 'none';
     makeMealPage.style.display = 'none';
+    body.style.gridTemplateRows = '9rem 3rem 6fr';
 }
 
 const makeMealSwap = () => {
     makeMealPage.style.display = 'grid';
+    genOptions.style.display = 'flex';
     addDishPage.style.display = 'none';
+    body.style.gridTemplateRows = '9rem 3rem 6fr 2fr';
 }
 
 makeMealButton.addEventListener('click', makeMealSwap);
@@ -74,9 +80,9 @@ function pushCuisine(event) {
     // Update Local Storage with Newest Cuisine Addition
     localStorage.setItem('dishes', JSON.stringify(dishes));
     // Capitalize Cuisine for Option HTML
-    const capitalizedCuisine = cuisineValue.charAt(0).toUpperCase() + cuisineValue.slice (1);
+    const capitalizedCuisine = cuisineValue.charAt(0).toUpperCase() + cuisineValue.slice(1);
     // Add New Cuisine Option
-    cuisineSelect.options.add( new Option(capitalizedCuisine, dishes.length - 1));
+    cuisineSelect.options.add(new Option(capitalizedCuisine, dishes.length - 1));
     // Clear Cuisine Input Field
     document.querySelector('.cuisine-input').value = '';
 };
@@ -109,8 +115,7 @@ const getRandomMeal = () => {
     const randomCuisine = dishes[Math.floor(Math.random() * dishes.length)];
     const randomEntree = randomCuisine.entree[Math.floor(Math.random() * randomCuisine.entree.length)];
     const randomSide = randomCuisine.side[Math.floor(Math.random() * randomCuisine.side.length)];
-    const randomDessert = randomCuisine.dessert[Math.floor(Math.random() * randomCuisine.dessert.length)];    
+    const randomDessert = randomCuisine.dessert[Math.floor(Math.random() * randomCuisine.dessert.length)];
     // console.log(`For dinner tonight we will have ${randomEntree.toLowerCase()} with a side of ${randomSide.toLowerCase()} and ${randomDessert.toLowerCase()} for dessert. Bon Apetite!`)
     myMeal.innerHTML = `For dinner tonight we will have ${randomEntree.toLowerCase()} with a side of ${randomSide.toLowerCase()} and ${randomDessert.toLowerCase()} for dessert.`;
 };
-

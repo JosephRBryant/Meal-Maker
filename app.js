@@ -22,6 +22,7 @@ function getLocalStorage() {
 const cuisineInput = document.querySelector('.cuisine-input');
 const cuisineButton = document.querySelector('.cuisine-button');
 const cuisineSelect = document.querySelector('.cuisine-select');
+const cuisineOptionSelect = document.querySelector('.cuisine-option-select');
 const dishSelect = document.querySelector('.dish-select');
 const dishInput = document.querySelector('.dish-input');
 const dishButton = document.querySelector('.dish-button');
@@ -55,7 +56,7 @@ const makeMealSwap = () => {
     makeMealPage.style.display = 'grid';
     genOptions.style.display = 'flex';
     addDishPage.style.display = 'none';
-    body.style.gridTemplateRows = '5rem 3rem 6fr 2fr';
+    body.style.gridTemplateRows = '5rem 3rem 2fr 6fr';
 }
 
 makeMealButton.addEventListener('click', makeMealSwap);
@@ -83,6 +84,7 @@ function pushCuisine(event) {
     const capitalizedCuisine = cuisineValue.charAt(0).toUpperCase() + cuisineValue.slice(1);
     // Add New Cuisine Option
     cuisineSelect.options.add(new Option(capitalizedCuisine, dishes.length - 1));
+    cuisineOptionSelect.options.add(new Option(capitalizedCuisine, dishes.length - 1));
     // Clear Cuisine Input Field
     document.querySelector('.cuisine-input').value = '';
 };
@@ -117,5 +119,5 @@ const getRandomMeal = () => {
     const randomSide = randomCuisine.side[Math.floor(Math.random() * randomCuisine.side.length)];
     const randomDessert = randomCuisine.dessert[Math.floor(Math.random() * randomCuisine.dessert.length)];
     // console.log(`For dinner tonight we will have ${randomEntree.toLowerCase()} with a side of ${randomSide.toLowerCase()} and ${randomDessert.toLowerCase()} for dessert. Bon Apetite!`)
-    myMeal.innerHTML = `For dinner tonight we will have <span>${randomEntree.toLowerCase()}</span> with a side of <span>${randomSide.toLowerCase()}</span> and <span>${randomDessert.toLowerCase()}</span> for dessert.`;
+    myMeal.innerHTML = `<h3>For dinner tonight we will have <span>${randomEntree.toLowerCase()}</span> with a side of <span>${randomSide.toLowerCase()}</span> and <span>${randomDessert.toLowerCase()}</span> for dessert.</h3>`;
 };

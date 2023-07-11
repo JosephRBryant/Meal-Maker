@@ -270,7 +270,9 @@ header img {
     height: 50%;
     margin-bottom: -2rem;
     background: var(--primary-color);
-    background-color: var(--light-color);
+    background-image: url('images/grocerybag.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
     border-radius: 2rem;
     z-index: 3;
 }
@@ -527,9 +529,9 @@ label {
     z-index: 2;
 }
 
-.options-icon {
+/* .options-icon {
     display: flex;
-}
+} */
 
 .cuisine-option {
     display: flex;

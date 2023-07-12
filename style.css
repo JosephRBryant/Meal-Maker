@@ -271,17 +271,19 @@ header img {
     margin-bottom: -2rem;
     background: var(--primary-color);
     background-image: url('images/grocerybag.jpg');
-    background-size: contain;
+    background-size: 80%;
     background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
     border-radius: 2rem;
-    z-index: 3;
+    z-index: 6;
 }
 
 .cuisine-form {
     display: flex;
     align-items: center;
     width: 100%;
-    margin: 1.75rem 1.25rem;
+    margin: 3.5rem 1.25rem;
 }
 
 .cuisine-input {
@@ -294,6 +296,7 @@ header img {
     border: none;
     color: var(--extra-dark-color);
     background-color: var(--medium-color);
+    opacity: .8;
     border-radius: 0 25px 25px 0;
 }
 
@@ -324,10 +327,15 @@ header img {
 .dish-container {
     display: flex;
     justify-content: center;
+    align-items: flex-end;
     position: relative;
     width: 100%;
     height: 50%;
     padding-top: 15px;
+    background-image: url('images/dishes.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 2rem;
     border-radius: 0 0 2rem 2rem;
     background-color: var(--primary-color);
     z-index: 2;
@@ -335,7 +343,7 @@ header img {
 
 .dish-form {
     width: 100%;
-    margin: .75rem 1.25rem;
+    margin: 3.5rem 1.25rem;
 }
 
 .select-form {
@@ -358,7 +366,7 @@ header img {
 
 .add-dish {
     display: flex;
-    margin-top: .75rem;
+    margin-top: 1.75rem;
 }
 
 .dish-input {
@@ -442,7 +450,7 @@ input[type=radio]:checked+label {
 }
 
 input[type=radio]:checked+label>.tab-label {
-    color: #f0f0f0;
+    color: #fff;
 }
 
 .glider {
